@@ -3,16 +3,18 @@ package demo
 import p5.p5Global._
 import p5.typesafe.P5App
 
-
 case class DemoState(i: Double)
 
 object DemoScala extends P5App[DemoState] {
+
+  val initialState: DemoState = DemoState(0)
 
   def setup(s: DemoState) = {
     // create a 400x400 black canvas
     createCanvas(400, 400)
     background(0)
     noStroke()
+
   }
 
   def draw(s: DemoState) = {
@@ -26,10 +28,4 @@ object DemoScala extends P5App[DemoState] {
 
   }
 
-  def initState: DemoState = DemoState(0)
-
 }
-
-
-
-
